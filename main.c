@@ -9,22 +9,23 @@ int main(void){
 
 double pi(void) {
 
-	double valor_pi, a;
+	int i;
+	double valor_pi = 0.0;
 
-	for (int i = 0; i <= 100 ; i++) {
+	for (i = 1; i <= 100 ; i++) {
 		
-		if (i%2 == 0){
+		if (i % 2 == 0) {
 
-			pi += 4/(2*i+1);
+			valor_pi = valor_pi - (4.0 / (2 * i - 1));
 		}
 
-		else{
+		else {
 
-			pi -= 4(2*i+1);
+			valor_pi = valor_pi + (4.0 / (2 * i - 1));
 		}
 
-		valor_pi = 4/i + 4/a;
-
-		printf("%lf\n",valor_pi);
+		printf("%f\t",valor_pi);
 	}
-	
+
+	return valor_pi;
+}
